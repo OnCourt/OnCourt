@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  HomeViewController.swift
 //  OnCourt
 //
 //  Created by Ian Anderson on 1/17/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
