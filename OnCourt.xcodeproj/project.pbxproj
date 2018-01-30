@@ -16,6 +16,10 @@
 		84A80014200FA103004C80BA /* OnCourtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A80013200FA103004C80BA /* OnCourtTests.swift */; };
 		84A8FFFD200FA103004C80BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8FFFC200FA103004C80BA /* AppDelegate.swift */; };
 		84A8FFFF200FA103004C80BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8FFFE200FA103004C80BA /* HomeViewController.swift */; };
+		84BBF2D92020C5B200993872 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D52020C5B200993872 /* SettingsViewController.swift */; };
+		84BBF2DA2020C5B200993872 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D62020C5B200993872 /* StatsViewController.swift */; };
+		84BBF2DB2020C5B200993872 /* ErrorTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */; };
+		84BBF2DC2020C5B200993872 /* MainPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D82020C5B200993872 /* MainPlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		84A8FFF9200FA103004C80BA /* OnCourt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCourt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8FFFC200FA103004C80BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A8FFFE200FA103004C80BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84BBF2D52020C5B200993872 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../../../TennisTracker/TennisTracker/SettingsViewController.swift; sourceTree = "<group>"; };
+		84BBF2D62020C5B200993872 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsViewController.swift; path = ../../../TennisTracker/TennisTracker/StatsViewController.swift; sourceTree = "<group>"; };
+		84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorTypeViewController.swift; path = ../../../TennisTracker/TennisTracker/ErrorTypeViewController.swift; sourceTree = "<group>"; };
+		84BBF2D82020C5B200993872 /* MainPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainPlayViewController.swift; path = ../../../TennisTracker/TennisTracker/MainPlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 				8488A7BA2016449800411ABB /* GamesViewController.swift */,
 				8488A7BC201644A900411ABB /* AccountViewController.swift */,
 				84A80002200FA103004C80BA /* Main.storyboard */,
+				84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */,
+				84BBF2D82020C5B200993872 /* MainPlayViewController.swift */,
+				84BBF2D52020C5B200993872 /* SettingsViewController.swift */,
+				84BBF2D62020C5B200993872 /* StatsViewController.swift */,
 				84A80005200FA103004C80BA /* Assets.xcassets */,
 				84A80007200FA103004C80BA /* LaunchScreen.storyboard */,
 				84A8000A200FA103004C80BA /* Info.plist */,
@@ -219,8 +231,12 @@
 				8488A7BB2016449800411ABB /* GamesViewController.swift in Sources */,
 				8488A7BD201644A900411ABB /* AccountViewController.swift in Sources */,
 				84A80001200FA103004C80BA /* PlayViewController.swift in Sources */,
+				84BBF2DC2020C5B200993872 /* MainPlayViewController.swift in Sources */,
+				84BBF2DB2020C5B200993872 /* ErrorTypeViewController.swift in Sources */,
 				84A8FFFD200FA103004C80BA /* AppDelegate.swift in Sources */,
+				84BBF2DA2020C5B200993872 /* StatsViewController.swift in Sources */,
 				84A8FFFF200FA103004C80BA /* HomeViewController.swift in Sources */,
+				84BBF2D92020C5B200993872 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
