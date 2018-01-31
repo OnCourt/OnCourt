@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300B8A09202166E40083F6FB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300B8A07202166E40083F6FB /* Interface.storyboard */; };
+		300B8A0B202166E40083F6FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300B8A0A202166E40083F6FB /* Assets.xcassets */; };
+		300B8A12202166E40083F6FB /* OnCourt Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 300B8A11202166E40083F6FB /* OnCourt Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		300B8A17202166E40083F6FB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B8A16202166E40083F6FB /* InterfaceController.swift */; };
+		300B8A19202166E40083F6FB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B8A18202166E40083F6FB /* ExtensionDelegate.swift */; };
+		300B8A1B202166E40083F6FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300B8A1A202166E40083F6FB /* Assets.xcassets */; };
+		300B8A1F202166E40083F6FB /* OnCourt Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 300B8A05202166E40083F6FB /* OnCourt Watch.app */; };
 		8488A7BB2016449800411ABB /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488A7BA2016449800411ABB /* GamesViewController.swift */; };
 		8488A7BD201644A900411ABB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488A7BC201644A900411ABB /* AccountViewController.swift */; };
 		84A80001200FA103004C80BA /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A80000200FA103004C80BA /* PlayViewController.swift */; };
@@ -19,6 +26,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		300B8A13202166E40083F6FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84A8FFF1200FA103004C80BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 300B8A10202166E40083F6FB;
+			remoteInfo = "OnCourt Watch Extension";
+		};
+		300B8A1D202166E40083F6FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84A8FFF1200FA103004C80BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 300B8A04202166E40083F6FB;
+			remoteInfo = "OnCourt Watch";
+		};
 		84A80010200FA103004C80BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84A8FFF1200FA103004C80BA /* Project object */;
@@ -28,7 +49,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		300B8A25202166E40083F6FB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				300B8A12202166E40083F6FB /* OnCourt Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300B8A27202166E40083F6FB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				300B8A1F202166E40083F6FB /* OnCourt Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		300B8A05202166E40083F6FB /* OnCourt Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OnCourt Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		300B8A08202166E40083F6FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		300B8A0A202166E40083F6FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		300B8A0C202166E40083F6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		300B8A11202166E40083F6FB /* OnCourt Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OnCourt Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		300B8A16202166E40083F6FB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		300B8A18202166E40083F6FB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		300B8A1A202166E40083F6FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		300B8A1C202166E40083F6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		300B8A2820216DA50083F6FB /* OnCourt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnCourt.entitlements; sourceTree = "<group>"; };
+		300B8A29202215FF0083F6FB /* OnCourt Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OnCourt Watch.entitlements"; sourceTree = "<group>"; };
 		8488A7BA2016449800411ABB /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		8488A7BC201644A900411ABB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		84A80000200FA103004C80BA /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +102,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		300B8A0E202166E40083F6FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84A8000C200FA103004C80BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,6 +126,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300B8A06202166E40083F6FB /* OnCourt Watch */ = {
+			isa = PBXGroup;
+			children = (
+				300B8A29202215FF0083F6FB /* OnCourt Watch.entitlements */,
+				300B8A07202166E40083F6FB /* Interface.storyboard */,
+				300B8A0A202166E40083F6FB /* Assets.xcassets */,
+				300B8A0C202166E40083F6FB /* Info.plist */,
+			);
+			path = "OnCourt Watch";
+			sourceTree = "<group>";
+		};
+		300B8A15202166E40083F6FB /* OnCourt Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				300B8A16202166E40083F6FB /* InterfaceController.swift */,
+				300B8A18202166E40083F6FB /* ExtensionDelegate.swift */,
+				300B8A1A202166E40083F6FB /* Assets.xcassets */,
+				300B8A1C202166E40083F6FB /* Info.plist */,
+			);
+			path = "OnCourt Watch Extension";
+			sourceTree = "<group>";
+		};
 		84A80012200FA103004C80BA /* OnCourtTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +162,8 @@
 			children = (
 				84A8FFFB200FA103004C80BA /* OnCourt */,
 				84A80012200FA103004C80BA /* OnCourtTests */,
+				300B8A06202166E40083F6FB /* OnCourt Watch */,
+				300B8A15202166E40083F6FB /* OnCourt Watch Extension */,
 				84A8FFFA200FA103004C80BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +173,8 @@
 			children = (
 				84A8FFF9200FA103004C80BA /* OnCourt.app */,
 				84A8000F200FA103004C80BA /* OnCourtTests.xctest */,
+				300B8A05202166E40083F6FB /* OnCourt Watch.app */,
+				300B8A11202166E40083F6FB /* OnCourt Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +182,7 @@
 		84A8FFFB200FA103004C80BA /* OnCourt */ = {
 			isa = PBXGroup;
 			children = (
+				300B8A2820216DA50083F6FB /* OnCourt.entitlements */,
 				84A8FFFC200FA103004C80BA /* AppDelegate.swift */,
 				84A8FFFE200FA103004C80BA /* HomeViewController.swift */,
 				84A80000200FA103004C80BA /* PlayViewController.swift */,
@@ -108,6 +199,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		300B8A04202166E40083F6FB /* OnCourt Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 300B8A26202166E40083F6FB /* Build configuration list for PBXNativeTarget "OnCourt Watch" */;
+			buildPhases = (
+				300B8A03202166E40083F6FB /* Resources */,
+				300B8A25202166E40083F6FB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				300B8A14202166E40083F6FB /* PBXTargetDependency */,
+			);
+			name = "OnCourt Watch";
+			productName = "OnCourt Watch";
+			productReference = 300B8A05202166E40083F6FB /* OnCourt Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		300B8A10202166E40083F6FB /* OnCourt Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 300B8A24202166E40083F6FB /* Build configuration list for PBXNativeTarget "OnCourt Watch Extension" */;
+			buildPhases = (
+				300B8A0D202166E40083F6FB /* Sources */,
+				300B8A0E202166E40083F6FB /* Frameworks */,
+				300B8A0F202166E40083F6FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OnCourt Watch Extension";
+			productName = "OnCourt Watch Extension";
+			productReference = 300B8A11202166E40083F6FB /* OnCourt Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		84A8000E200FA103004C80BA /* OnCourtTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84A8001B200FA103004C80BA /* Build configuration list for PBXNativeTarget "OnCourtTests" */;
@@ -133,10 +258,12 @@
 				84A8FFF5200FA103004C80BA /* Sources */,
 				84A8FFF6200FA103004C80BA /* Frameworks */,
 				84A8FFF7200FA103004C80BA /* Resources */,
+				300B8A27202166E40083F6FB /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				300B8A1E202166E40083F6FB /* PBXTargetDependency */,
 			);
 			name = OnCourt;
 			productName = OnCourt;
@@ -153,6 +280,19 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Ian Anderson";
 				TargetAttributes = {
+					300B8A04202166E40083F6FB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					300B8A10202166E40083F6FB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					84A8000E200FA103004C80BA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -161,6 +301,11 @@
 					84A8FFF8200FA103004C80BA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -179,11 +324,30 @@
 			targets = (
 				84A8FFF8200FA103004C80BA /* OnCourt */,
 				84A8000E200FA103004C80BA /* OnCourtTests */,
+				300B8A04202166E40083F6FB /* OnCourt Watch */,
+				300B8A10202166E40083F6FB /* OnCourt Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		300B8A03202166E40083F6FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				300B8A0B202166E40083F6FB /* Assets.xcassets in Resources */,
+				300B8A09202166E40083F6FB /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300B8A0F202166E40083F6FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				300B8A1B202166E40083F6FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84A8000D200FA103004C80BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +368,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		300B8A0D202166E40083F6FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				300B8A19202166E40083F6FB /* ExtensionDelegate.swift in Sources */,
+				300B8A17202166E40083F6FB /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84A8000B200FA103004C80BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +400,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		300B8A14202166E40083F6FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 300B8A10202166E40083F6FB /* OnCourt Watch Extension */;
+			targetProxy = 300B8A13202166E40083F6FB /* PBXContainerItemProxy */;
+		};
+		300B8A1E202166E40083F6FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 300B8A04202166E40083F6FB /* OnCourt Watch */;
+			targetProxy = 300B8A1D202166E40083F6FB /* PBXContainerItemProxy */;
+		};
 		84A80011200FA103004C80BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84A8FFF8200FA103004C80BA /* OnCourt */;
@@ -235,6 +418,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		300B8A07202166E40083F6FB /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				300B8A08202166E40083F6FB /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		84A80002200FA103004C80BA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -254,6 +445,82 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		300B8A20202166E40083F6FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "OnCourt Watch/OnCourt Watch.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9TLPAE73H;
+				IBSC_MODULE = OnCourt_Watch_Extension;
+				INFOPLIST_FILE = "OnCourt Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IanAnderson.OnCourt.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		300B8A21202166E40083F6FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "OnCourt Watch/OnCourt Watch.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9TLPAE73H;
+				IBSC_MODULE = OnCourt_Watch_Extension;
+				INFOPLIST_FILE = "OnCourt Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IanAnderson.OnCourt.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		300B8A22202166E40083F6FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9TLPAE73H;
+				INFOPLIST_FILE = "OnCourt Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IanAnderson.OnCourt.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		300B8A23202166E40083F6FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9TLPAE73H;
+				INFOPLIST_FILE = "OnCourt Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IanAnderson.OnCourt.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 		84A80016200FA103004C80BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -365,6 +632,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OnCourt/OnCourt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9TLPAE73H;
 				INFOPLIST_FILE = OnCourt/Info.plist;
@@ -380,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OnCourt/OnCourt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9TLPAE73H;
 				INFOPLIST_FILE = OnCourt/Info.plist;
@@ -426,6 +695,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		300B8A24202166E40083F6FB /* Build configuration list for PBXNativeTarget "OnCourt Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300B8A22202166E40083F6FB /* Debug */,
+				300B8A23202166E40083F6FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		300B8A26202166E40083F6FB /* Build configuration list for PBXNativeTarget "OnCourt Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300B8A20202166E40083F6FB /* Debug */,
+				300B8A21202166E40083F6FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		84A80018200FA103004C80BA /* Build configuration list for PBXNativeTarget "OnCourt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
