@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8476496B20221C6100DD15C0 /* OnCourt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnCourt.entitlements; sourceTree = "<group>"; };
 		8488A7BA2016449800411ABB /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		8488A7BC201644A900411ABB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		84A80000200FA103004C80BA /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 				84A80005200FA103004C80BA /* Assets.xcassets */,
 				84A80007200FA103004C80BA /* LaunchScreen.storyboard */,
 				84A8000A200FA103004C80BA /* Info.plist */,
+				8476496B20221C6100DD15C0 /* OnCourt.entitlements */,
 			);
 			path = OnCourt;
 			sourceTree = "<group>";
@@ -172,7 +174,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -382,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OnCourt/OnCourt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5WTF5M2FW;
 				INFOPLIST_FILE = OnCourt/Info.plist;
@@ -397,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OnCourt/OnCourt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5WTF5M2FW;
 				INFOPLIST_FILE = OnCourt/Info.plist;
