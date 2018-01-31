@@ -48,7 +48,6 @@
 		84BBF2D62020C5B200993872 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsViewController.swift; path = ../../../TennisTracker/TennisTracker/StatsViewController.swift; sourceTree = "<group>"; };
 		84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorTypeViewController.swift; path = ../../../TennisTracker/TennisTracker/ErrorTypeViewController.swift; sourceTree = "<group>"; };
 		84BBF2D82020C5B200993872 /* MainPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainPlayViewController.swift; path = ../../../TennisTracker/TennisTracker/MainPlayViewController.swift; sourceTree = "<group>"; };
-		84E1FC22202214E300F1A368 /* OnCourt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnCourt.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +110,6 @@
 				84A80005200FA103004C80BA /* Assets.xcassets */,
 				84A80007200FA103004C80BA /* LaunchScreen.storyboard */,
 				84A8000A200FA103004C80BA /* Info.plist */,
-				84E1FC22202214E300F1A368 /* OnCourt.entitlements */,
 			);
 			path = OnCourt;
 			sourceTree = "<group>";
@@ -174,7 +172,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -384,7 +382,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = OnCourt/OnCourt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5WTF5M2FW;
 				INFOPLIST_FILE = OnCourt/Info.plist;
@@ -400,7 +397,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = OnCourt/OnCourt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U5WTF5M2FW;
 				INFOPLIST_FILE = OnCourt/Info.plist;
