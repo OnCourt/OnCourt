@@ -491,24 +491,30 @@
                                 <state key="normal" image="AccountIcon"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XEO-bx-xj2">
-                                <rect key="frame" x="148" y="303" width="78" height="60"/>
+                                <rect key="frame" x="148" y="303" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-ZK-22U">
-                                        <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
                                         <state key="normal" title="New Game"/>
                                         <connections>
                                             <segue destination="g7F-sy-P0h" kind="show" id="aQW-RK-hkh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8W-hT-fNk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8W-hT-fNk">
                                         <rect key="frame" x="0.0" y="30" width="78" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Load Game"/>
                                         <connections>
                                             <segue destination="WJa-zl-4gR" kind="show" id="eyK-8h-vKr"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="j8W-hT-fNk"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
