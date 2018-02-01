@@ -30,7 +30,7 @@
         <!--Interface Controller-->
         <scene sceneID="m3O-ls-p3b">
             <objects>
-                <controller id="4Kr-Qd-viD">
+                <controller id="4Kr-Qd-viD" customClass="InterfaceController" customModule="OnCourt_Watch_Extension">
                     <items>
                         <button width="136" alignment="left" title="Button" id="ShQ-cy-Jf9"/>
                         <button width="1" alignment="left" title="Button" id="QJa-ii-t7v"/>
