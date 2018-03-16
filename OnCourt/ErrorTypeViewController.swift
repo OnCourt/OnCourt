@@ -48,6 +48,7 @@ class ErrorTypeViewController: UIViewController {
     
     
     func IncrementStat(){
+        Variables.total += 1
         switch Variables.tagOfType{
         case 0:
             switch Variables.tagOfStroke{

@@ -16,36 +16,36 @@ class StatsViewController: UIViewController {
     @IBOutlet weak var ADLabel: UILabel!
     
     //IBOutlets for colletion cells
-    @IBOutlet weak var DUFHGSWLabel: UILabel!
-    @IBOutlet weak var DUFHGSFELabel: UILabel!
-    @IBOutlet weak var DUFHGSUELabel: UILabel!
-    @IBOutlet weak var ADFHGSWLabel: UILabel!
-    @IBOutlet weak var ADFHGSFELabel: UILabel!
-    @IBOutlet weak var ADFHGSUELabel: UILabel!
-    @IBOutlet weak var DUBHGSWLabel: UILabel!
-    @IBOutlet weak var DUBHGSFELabel: UILabel!
-    @IBOutlet weak var DUBHGSEULabel: UILabel!
-    @IBOutlet weak var ADBHGSWLabel: UILabel!
-    @IBOutlet weak var ADBHGSFELabel: UILabel!
-    @IBOutlet weak var ADBHGSUELabel: UILabel!
-    @IBOutlet weak var DUFHVWLabel: UILabel!
-    @IBOutlet weak var DUFHVFELabel: UILabel!
-    @IBOutlet weak var DUFHVUELabel: UILabel!
-    @IBOutlet weak var ADFHVWLabel: UILabel!
-    @IBOutlet weak var ADFHVFELabel: UILabel!
-    @IBOutlet weak var ADFHVUELabel: UILabel!
-    @IBOutlet weak var DUBHVWLabel: UILabel!
-    @IBOutlet weak var DUBHVFELabel: UILabel!
-    @IBOutlet weak var DUBHVUELabel: UILabel!
-    @IBOutlet weak var ADBHVWLabel: UILabel!
-    @IBOutlet weak var ADBHVFELabel: UILabel!
-    @IBOutlet weak var ADBHVUELabel: UILabel!
-    @IBOutlet weak var DUOHWLabel: UILabel!
-    @IBOutlet weak var DUOHFELabel: UILabel!
-    @IBOutlet weak var DUOHUELabel: UILabel!
-    @IBOutlet weak var ADOHWLabel: UILabel!
-    @IBOutlet weak var ADOHFELabel: UILabel!
-    @IBOutlet weak var ADOHUELabel: UILabel!
+    @IBOutlet weak var DUFHGSWLabel: StatsLabel!
+    @IBOutlet weak var DUFHGSFELabel: StatsLabel!
+    @IBOutlet weak var DUFHGSUELabel: StatsLabel!
+    @IBOutlet weak var ADFHGSWLabel: StatsLabel!
+    @IBOutlet weak var ADFHGSFELabel: StatsLabel!
+    @IBOutlet weak var ADFHGSUELabel: StatsLabel!
+    @IBOutlet weak var DUBHGSWLabel: StatsLabel!
+    @IBOutlet weak var DUBHGSFELabel: StatsLabel!
+    @IBOutlet weak var DUBHGSEULabel: StatsLabel!
+    @IBOutlet weak var ADBHGSWLabel: StatsLabel!
+    @IBOutlet weak var ADBHGSFELabel: StatsLabel!
+    @IBOutlet weak var ADBHGSUELabel: StatsLabel!
+    @IBOutlet weak var DUFHVWLabel: StatsLabel!
+    @IBOutlet weak var DUFHVFELabel: StatsLabel!
+    @IBOutlet weak var DUFHVUELabel: StatsLabel!
+    @IBOutlet weak var ADFHVWLabel: StatsLabel!
+    @IBOutlet weak var ADFHVFELabel: StatsLabel!
+    @IBOutlet weak var ADFHVUELabel: StatsLabel!
+    @IBOutlet weak var DUBHVWLabel: StatsLabel!
+    @IBOutlet weak var DUBHVFELabel: StatsLabel!
+    @IBOutlet weak var DUBHVUELabel: StatsLabel!
+    @IBOutlet weak var ADBHVWLabel: StatsLabel!
+    @IBOutlet weak var ADBHVFELabel: StatsLabel!
+    @IBOutlet weak var ADBHVUELabel: StatsLabel!
+    @IBOutlet weak var DUOHWLabel: StatsLabel!
+    @IBOutlet weak var DUOHFELabel: StatsLabel!
+    @IBOutlet weak var DUOHUELabel: StatsLabel!
+    @IBOutlet weak var ADOHWLabel: StatsLabel!
+    @IBOutlet weak var ADOHFELabel: StatsLabel!
+    @IBOutlet weak var ADOHUELabel: StatsLabel!
     
     
     override func viewDidLoad() {
@@ -54,7 +54,7 @@ class StatsViewController: UIViewController {
         //Round Corners
         DULabel.layer.cornerRadius=8
         ADLabel.layer.cornerRadius=8
-        
+        /*
         DUFHGSWLabel.text = String(Variables.DUFHGSW)
         DUFHGSFELabel.text = String(Variables.DUFHGSFE)
         DUFHGSUELabel.text = String(Variables.DUFHGSUE)
@@ -85,10 +85,59 @@ class StatsViewController: UIViewController {
         ADOHWLabel.text = String(Variables.ADOHW)
         ADOHFELabel.text = String(Variables.ADOHFE)
         ADOHUELabel.text = String(Variables.ADOHUE)
+ */
+        DUFHGSWLabel.updateStat(value: Variables.DUFHGSW)
+        DUFHGSFELabel.updateStat(value: Variables.DUFHGSFE)
+        DUFHGSUELabel.updateStat(value: Variables.DUFHGSUE)
+        ADFHGSWLabel.updateStat(value: Variables.ADFHGSW)
+        ADFHGSFELabel.updateStat(value: Variables.ADFHGSFE)
+        ADFHGSUELabel.updateStat(value: Variables.ADFHGSUE)
+        DUBHGSWLabel.updateStat(value: Variables.DUBHGSW)
+        DUBHGSFELabel.updateStat(value: Variables.DUBHGSFE)
+        DUBHGSEULabel.updateStat(value: Variables.DUBHGSUE)
+        ADBHGSWLabel.updateStat(value: Variables.ADBHGSW)
+        ADBHGSFELabel.updateStat(value: Variables.ADBHGSFE)
+        ADBHGSUELabel.updateStat(value: Variables.ADBHGSUE)
+        DUFHVWLabel.updateStat(value: Variables.DUFHVW)
+        DUFHVFELabel.updateStat(value: Variables.DUFHVFE)
+        DUFHVUELabel.updateStat(value: Variables.DUFHVUE)
+        ADFHVWLabel.updateStat(value: Variables.ADFHVW)
+        ADFHVFELabel.updateStat(value: Variables.ADFHVFE)
+        ADFHVUELabel.updateStat(value: Variables.ADFHVUE)
+        DUBHVWLabel.updateStat(value: Variables.DUBHVW)
+        DUBHVFELabel.updateStat(value: Variables.DUBHVFE)
+        DUBHVUELabel.updateStat(value: Variables.DUBHVUE)
+        ADBHVWLabel.updateStat(value: Variables.ADBHVW)
+        ADBHVFELabel.updateStat(value: Variables.ADBHVFE)
+        ADBHVUELabel.updateStat(value: Variables.ADBHVUE)
+        DUOHWLabel.updateStat(value: Variables.DUOHW)
+        DUOHFELabel.updateStat(value: Variables.DUOHUE)
+        DUOHUELabel.updateStat(value: Variables.DUOHUE)
+        ADOHWLabel.updateStat(value: Variables.ADOHW)
+        ADOHFELabel.updateStat(value: Variables.ADOHFE)
+        ADOHUELabel.updateStat(value: Variables.ADOHUE)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+class StatsLabel: UILabel {
+    func updateStat(value:Int){
+        let val:Double = Double(value)
+        text = String(value)
+        let avg:Double = Double(Variables.total)/30
+        if(val >= 2 * avg){
+            textColor = UIColor.red
+        }
+        else if(val <= 0.5 * avg){
+            textColor = UIColor.green
+        }
+        else{
+            textColor = UIColor.yellow
+        }
     }
 }

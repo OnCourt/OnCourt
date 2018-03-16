@@ -46,6 +46,8 @@ struct Variables {
     static var ADOHW: Int = 0
     static var ADOHFE: Int = 0
     static var ADOHUE: Int = 0
+    //Totals
+    static var total: Int = 0
     
 }
 
