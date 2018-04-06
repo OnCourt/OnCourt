@@ -16,6 +16,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Singles Defaults
+        let players = UserDefaults.standard
+        let singles1 = ["singles1" : ""]
+        players.register(defaults: singles1)
+        let singles2 = ["singles2" : ""]
+        players.register(defaults: singles2)
+        let singles3 = ["singles3" : ""]
+        players.register(defaults: singles3)
+        
+        //Doubles Defaults
+        //
+        //1 Doubles
+        let doubles1ad = ["doubles1ad" : ""]
+        players.register(defaults: doubles1ad)
+        let doubles1deuce = ["doubles1deuce" : ""]
+        players.register(defaults: doubles1deuce)
+        //2 Doubles
+        let doubles2ad = ["doubles2ad" : ""]
+        players.register(defaults: doubles2ad)
+        let doubles2deuce = ["doubles2deuce" : ""]
+        players.register(defaults: doubles2deuce)
+        //3 Doubles
+        let doubles3ad = ["doubles3ad" : ""]
+        players.register(defaults: doubles3ad)
+        let doubles3deuce = ["doubles3deuce" : ""]
+        players.register(defaults: doubles3deuce)
+        //4 Doubles
+        let doubles4ad = ["doubles4ad" : ""]
+        players.register(defaults: doubles4ad)
+        let doubles4deuce = ["doubles4deuce" : ""]
+        players.register(defaults: doubles4deuce)
+        //Team Name
+        let teamName = ["teamName" : ""]
+        players.register(defaults: teamName)
+         
+        
         return true
     }
 
