@@ -25,7 +25,7 @@ class ErrorTypeViewController: UIViewController {
         UnforcedErrorB.layer.cornerRadius=8
         
         UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "Tennis-court.png")?.draw(in: self.view.bounds)
+        UIImage(named: "Tennis-court.jpg")?.draw(in: self.view.bounds)
         
         if let image: UIImage = UIGraphicsGetImageFromCurrentImageContext(){
             UIGraphicsEndImageContext()

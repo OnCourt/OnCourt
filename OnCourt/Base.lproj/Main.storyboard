@@ -329,7 +329,6 @@
         <!--Account-->
         <scene sceneID="vlr-0N-0UN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iks-yP-Vka" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AccountViewController" title="Account" id="KvV-b5-9GW" customClass="AccountViewController" customModule="OnCourt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MEF-fF-LQ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -629,69 +628,9 @@
                         <outlet property="TeamNameField" destination="mt7-Z4-3r1" id="OaF-2z-hbn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iks-yP-Vka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="-0.44977511244377816"/>
-        </scene>
-        <!--Play View Controller-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="PlayViewController" customModule="OnCourt" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLa-3S-JmH" userLabel="AccountButton">
-                                <rect key="frame" x="16" y="20" width="20" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="AccountIcon"/>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XEO-bx-xj2">
-                                <rect key="frame" x="148" y="303" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8W-hT-fNk">
-                                        <rect key="frame" x="0.0" y="30" width="78" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Load Game"/>
-                                        <connections>
-                                            <segue destination="WJa-zl-4gR" kind="show" id="eyK-8h-vKr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="j8W-hT-fNk"/>
-                                    </mask>
-                                </variation>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-ZK-22U">
-                                <rect key="frame" x="148.82980297722725" y="318.81637693919811" width="75.000000000000114" height="30.000000000000057"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Game"/>
-                                <connections>
-                                    <segue destination="g7F-sy-P0h" kind="show" id="aQW-RK-hkh"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="v7q-o2-JrK">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="c3f-Bw-MIO">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nwC-cz-NtJ">
-                                <rect key="frame" x="16" y="11" width="20" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="AccountIcon"/>
-                                <connections>
-                                    <segue destination="KvV-b5-9GW" kind="show" id="gaf-Ew-8Ps"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1600.8" y="-0.44977511244377816"/>
         </scene>
         <!--Games View Controller-->
         <scene sceneID="AmW-bl-tRL">
@@ -706,14 +645,37 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="AccountIcon"/>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Games" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IV4-hf-pfj">
-                                <rect key="frame" x="132" y="64" width="110" height="43"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="29d-m1-PJo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PFV-xO-EcE">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PFV-xO-EcE" id="yyw-5k-dij">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkv-Dy-egm" userLabel="Name Label">
+                                                    <rect key="frame" x="15" y="6" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xC4-uh-tqN" userLabel="Date Label">
+                                                    <rect key="frame" x="263" y="6" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xaO-Zn-NeR"/>
@@ -734,39 +696,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbO-hf-BAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.5999999999999" y="699.40029985007504"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="sTm-q4-iNO">
-            <objects>
-                <viewController id="WJa-zl-4gR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dma-Bc-D7L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Saved Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVL-CK-g7t">
-                                <rect key="frame" x="121" y="323" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBw-aU-aNR">
-                                <rect key="frame" x="150" y="575" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Game"/>
-                                <connections>
-                                    <segue destination="g7F-sy-P0h" kind="show" id="sJQ-uN-Zxg"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="3AK-CQ-xDn"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WhY-Fe-L2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2577" y="460"/>
+            <point key="canvasLocation" x="1780" y="699"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -780,6 +710,7 @@
                     <connections>
                         <segue destination="tIR-qC-Jhf" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="4pc-Cg-aLR" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Z9W-Q0-Kaa" kind="relationship" relationship="viewControllers" id="M9M-74-tNV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -817,12 +748,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="xIY-BI-GaU"/>
+                        <segue destination="g7F-sy-P0h" kind="relationship" relationship="rootViewController" id="EL5-Vq-VUH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFb-40-sqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748.79999999999995" y="0.0"/>
+            <point key="canvasLocation" x="1276" y="0.0"/>
         </scene>
         <!--GAMES-->
         <scene sceneID="pVJ-hL-l55">
@@ -842,77 +773,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21C-BP-EGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748.79999999999995" y="700.74962518740631"/>
-        </scene>
-        <!--Error Type View Controller-->
-        <scene sceneID="JK9-IJ-r3e">
-            <objects>
-                <viewController id="o8o-Sj-yva" customClass="ErrorTypeViewController" customModule="OnCourt" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Fi9-9S-sYn"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kwq-P3-O0k"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Er-Ma-G5m">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="0Sg-35-NzM">
-                                <rect key="frame" x="137" y="140" width="102" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66d-mw-bYQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Winner">
-                                            <color key="titleColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Type:" destination="o8o-Sj-yva" eventType="touchUpInside" id="q3H-xj-eQx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZe-mM-XkR">
-                                        <rect key="frame" x="0.0" y="62" width="102" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Forced Error">
-                                            <color key="titleColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Type:" destination="o8o-Sj-yva" eventType="touchUpInside" id="exh-CG-ncl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQX-4r-kk5">
-                                        <rect key="frame" x="0.0" y="124" width="102" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Unforced Error">
-                                            <color key="titleColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Type:" destination="o8o-Sj-yva" eventType="touchUpInside" id="OCN-Kq-U3f"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="OZe-mM-XkR" firstAttribute="height" secondItem="66d-mw-bYQ" secondAttribute="height" id="2Wo-PF-w7V"/>
-                                    <constraint firstItem="OZe-mM-XkR" firstAttribute="width" secondItem="66d-mw-bYQ" secondAttribute="width" id="dZ4-gx-RmM"/>
-                                    <constraint firstItem="PQX-4r-kk5" firstAttribute="height" secondItem="66d-mw-bYQ" secondAttribute="height" id="i6F-PW-Kc6"/>
-                                    <constraint firstItem="PQX-4r-kk5" firstAttribute="width" secondItem="66d-mw-bYQ" secondAttribute="width" id="nzc-YL-t8c"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="7ma-UA-HHy"/>
-                    </view>
-                    <connections>
-                        <outlet property="ForcedErrorB" destination="OZe-mM-XkR" id="YgW-Ok-ump"/>
-                        <outlet property="UnforcedErrorB" destination="PQX-4r-kk5" id="dcL-0B-kiX"/>
-                        <outlet property="WinnerB" destination="66d-mw-bYQ" id="0ed-M2-HjS"/>
-                        <segue destination="g7F-sy-P0h" kind="show" identifier="ErrorTypeToScoreScene" id="pgI-bK-hXA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wTQ-1d-Xgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3292" y="-582"/>
+            <point key="canvasLocation" x="799" y="699"/>
         </scene>
         <!--Stats View Controller-->
         <scene sceneID="or4-eY-gHk">
@@ -933,7 +794,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="AD Returner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gss-bT-554">
                                         <rect key="frame" x="0.0" y="0.0" width="129" height="20.5"/>
                                         <color key="backgroundColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -993,14 +854,14 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="l3t-vb-gIr">
-                                <rect key="frame" x="101" y="120" width="120" height="20.5"/>
+                                <rect key="frame" x="101" y="120" width="125.5" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Duece Returner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-BV-Sw4">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Deuce Returner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-BV-Sw4">
+                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="20.5"/>
                                         <color key="backgroundColor" red="0.76975035670000003" green="0.91703259940000004" blue="0.26091215010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1377,28 +1238,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iw-NC-IoE">
+                                <rect key="frame" x="318" y="72" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stats">
+                                    <color key="titleColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6he-GU-139" kind="show" id="zrS-OB-hwP"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="IPT-WB-zf0">
-                                <rect key="frame" x="52" y="178" width="270" height="320"/>
+                                <rect key="frame" x="22" y="110" width="330" height="333.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="54h-Rg-pVc">
-                                        <rect key="frame" x="0.0" y="0.0" width="270" height="320"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="333.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="hoa-1H-amm">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="320"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="149" height="333.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Duece Returner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRX-Bd-7Qf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Deuce Returner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRX-Bd-7Qf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="149" height="32.5"/>
                                                         <color key="backgroundColor" red="0.76975035670000003" green="0.91703259940000004" blue="0.26091215010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSo-Wc-LTm">
-                                                        <rect key="frame" x="0.0" y="58" width="120" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="FH Groundstroke">
+                                                        <rect key="frame" x="0.0" y="60.5" width="149" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="   FH Groundstroke   ">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -1406,8 +1278,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuU-c3-oo0">
-                                                        <rect key="frame" x="0.0" y="116" width="120" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="120.5" width="149" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="BH Groundstroke">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -1416,8 +1289,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9S-lh-Mbz">
-                                                        <rect key="frame" x="0.0" y="174" width="120" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="180.5" width="149" height="32.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="FH Volley">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -1426,8 +1300,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kf0-8B-yP7">
-                                                        <rect key="frame" x="0.0" y="232" width="120" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="241" width="149" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="BH Volley">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -1436,8 +1311,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fie-AW-ntX">
-                                                        <rect key="frame" x="0.0" y="290" width="120" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="301" width="149" height="32.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Overhead">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -1462,19 +1338,20 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="kww-cY-xlr">
-                                                <rect key="frame" x="152" y="0.0" width="118" height="320"/>
+                                                <rect key="frame" x="181" y="0.0" width="149" height="333.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="AD Returner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acS-sO-2Ok">
-                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="149" height="32.5"/>
                                                         <color key="backgroundColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <color key="textColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSW-ED-hIb">
-                                                        <rect key="frame" x="0.0" y="58" width="118" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="FH Groundstroke">
+                                                    <button tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSW-ED-hIb">
+                                                        <rect key="frame" x="0.0" y="60.5" width="149" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="   FH Groundstroke   ">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -1482,8 +1359,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEH-1b-lMu">
-                                                        <rect key="frame" x="0.0" y="116" width="118" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="120.5" width="149" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="BH Groundstroke">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -1492,8 +1370,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knf-mG-ST8">
-                                                        <rect key="frame" x="0.0" y="174" width="118" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="180.5" width="149" height="32.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="FH Volley">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -1502,8 +1381,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="10" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dU4-48-Asu">
-                                                        <rect key="frame" x="0.0" y="232" width="118" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="241" width="149" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="BH Volley">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -1512,8 +1392,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="11" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLG-SS-NL5">
-                                                        <rect key="frame" x="0.0" y="290" width="118" height="30"/>
-                                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.59215686270000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="301" width="149" height="32.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Overhead">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.92941176469999998" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
@@ -1537,32 +1418,53 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cae-hk-dg4">
-                                        <rect key="frame" x="80" y="352" width="110" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Undo Last Point"/>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3ox-y4-lgv">
+                                <rect key="frame" x="7" y="508" width="360" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOG-E8-0yh">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.63921568627450975" green="0.6470588235294118" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Winner">
+                                            <color key="titleColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
-                                            <action selector="Stroke:" destination="g7F-sy-P0h" eventType="touchUpInside" id="awf-IS-mXO"/>
+                                            <action selector="Type:" destination="g7F-sy-P0h" eventType="touchUpInside" id="HTN-ln-YKD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-EG-QrE">
+                                        <rect key="frame" x="125" y="0.0" width="110" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.63921568627450975" green="0.6470588235294118" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Forced Error">
+                                            <color key="titleColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Type:" destination="g7F-sy-P0h" eventType="touchUpInside" id="vmB-ji-c09"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw5-SO-Vo7">
+                                        <rect key="frame" x="250" y="0.0" width="110" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" red="0.63921568627450975" green="0.6470588235294118" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title=" Unforced Error ">
+                                            <color key="titleColor" red="0.7737980485" green="0.91703891749999999" blue="0.25556433200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Type:" destination="g7F-sy-P0h" eventType="touchUpInside" id="UcZ-ed-tGV"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Cae-hk-dg4"/>
-                                    </mask>
-                                </variation>
+                                <constraints>
+                                    <constraint firstItem="fw5-SO-Vo7" firstAttribute="width" secondItem="GOG-E8-0yh" secondAttribute="width" id="IGh-tY-M3g"/>
+                                    <constraint firstItem="aBb-EG-QrE" firstAttribute="height" secondItem="GOG-E8-0yh" secondAttribute="height" id="SSi-Yv-9s1"/>
+                                    <constraint firstItem="fw5-SO-Vo7" firstAttribute="height" secondItem="GOG-E8-0yh" secondAttribute="height" id="pcZ-f2-BMT"/>
+                                    <constraint firstItem="aBb-EG-QrE" firstAttribute="width" secondItem="GOG-E8-0yh" secondAttribute="width" id="yOr-Yc-S7Y"/>
+                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iw-NC-IoE">
-                                <rect key="frame" x="318" y="72" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stats">
-                                    <color key="titleColor" red="0.0" green="0.65905755759999995" blue="0.8881173134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="6he-GU-139" kind="show" id="zrS-OB-hwP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="3ol-NO-ZXX"/>
@@ -1581,14 +1483,15 @@
                         <outlet property="DUFHV" destination="k9S-lh-Mbz" id="czt-Fk-siS"/>
                         <outlet property="DULabel" destination="oRX-Bd-7Qf" id="u6s-dU-mha"/>
                         <outlet property="DUOH" destination="fie-AW-ntX" id="UJ1-J8-nB1"/>
+                        <outlet property="ForcedErrorB" destination="aBb-EG-QrE" id="5PV-Cg-1Gx"/>
                         <outlet property="Stats" destination="8iw-NC-IoE" id="bhf-ke-9t4"/>
-                        <outlet property="UndoButton" destination="Cae-hk-dg4" id="IGG-Nu-2LC"/>
-                        <segue destination="o8o-Sj-yva" kind="show" identifier="ReturnerToType" id="X9T-hj-Ch8"/>
+                        <outlet property="UnforcedErrorB" destination="fw5-SO-Vo7" id="3Xl-V7-PgN"/>
+                        <outlet property="WinnerB" destination="GOG-E8-0yh" id="Xj9-gp-dIM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtW-Pp-1nB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="-239"/>
+            <point key="canvasLocation" x="2084" y="-0.44977511244377816"/>
         </scene>
     </scenes>
     <resources>
@@ -1598,7 +1501,6 @@
         <image name="PlayImage" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pgI-bK-hXA"/>
-        <segue reference="aye-Hm-wHC"/>
+        <segue reference="WUr-1a-qL4"/>
     </inferredMetricsTieBreakers>
 </document>

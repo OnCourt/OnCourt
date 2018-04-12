@@ -52,7 +52,8 @@ struct Variables {
 }
 
 class MainPlayViewController: UIViewController {
-
+    
+    
     //Duece Retuner IBOutlets
     @IBOutlet weak var DULabel: UILabel!
     @IBOutlet weak var DUFHGS: UIButton!
@@ -67,16 +68,21 @@ class MainPlayViewController: UIViewController {
     @IBOutlet weak var ADFHV: UIButton!
     @IBOutlet weak var ADBHV: UIButton!
     @IBOutlet weak var ADOH: UIButton!
+    //Type IBOutlets
+    @IBOutlet weak var WinnerB: UIButton!
+    @IBOutlet weak var ForcedErrorB: UIButton!
+    @IBOutlet weak var UnforcedErrorB: UIButton!
+    
     //Other IBOutlets
-    @IBOutlet weak var UndoButton: UIButton!
     @IBOutlet weak var Stats: UIButton!
+    @IBOutlet weak var UndoButton: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "Tennis-court.png")?.draw(in: self.view.bounds)
+        UIImage(named: "Tennis-court.jpg")?.draw(in: self.view.bounds)
         
         if let image: UIImage = UIGraphicsGetImageFromCurrentImageContext(){
             UIGraphicsEndImageContext()
@@ -86,22 +92,46 @@ class MainPlayViewController: UIViewController {
             debugPrint("Image not available")
         }
         
+        //Set Backgrounds
+        DUFHGS.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        DUBHGS.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        DUFHV.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        DUBHV.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        DUOH.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        ADFHGS.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        ADBHGS.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        ADFHV.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        ADBHV.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        ADOH.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground.png"), for: .normal)
+        WinnerB.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground-Small"), for: .normal)
+        ForcedErrorB.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground-Small"), for: .normal)
+        UnforcedErrorB.setBackgroundImage(#imageLiteral(resourceName: "OnCourtButtonBackground-Small"), for: .normal)
+        
+        
+        
         //Round Corners
         DULabel.layer.masksToBounds=true
-        DULabel.layer.cornerRadius=4
+        DULabel.layer.cornerRadius=3
+        /*
         DUFHGS.layer.cornerRadius=8
         DUBHGS.layer.cornerRadius=8
         DUFHV.layer.cornerRadius=8
         DUBHV.layer.cornerRadius=8
         DUOH.layer.cornerRadius=8
+         */
         ADLabel.layer.masksToBounds=true
-        ADLabel.layer.cornerRadius=4
+        ADLabel.layer.cornerRadius=3
+        /*
         ADFHGS.layer.cornerRadius=8
         ADBHGS.layer.cornerRadius=8
         ADFHV.layer.cornerRadius=8
         ADBHV.layer.cornerRadius=8
         ADOH.layer.cornerRadius=8
-        UndoButton.layer.cornerRadius=8
+        WinnerB.layer.cornerRadius=8
+        ForcedErrorB.layer.cornerRadius=8
+        UnforcedErrorB.layer.cornerRadius=8
+        */
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -110,6 +140,7 @@ class MainPlayViewController: UIViewController {
     }
     @IBAction func Stroke(_ sender: UIButton) {
         Variables.tagOfStroke = sender.tag
+        deselectAll()
         switch Variables.tagOfStroke{
         case 0:
             //Run Stats Fucntion
@@ -118,9 +149,84 @@ class MainPlayViewController: UIViewController {
             //Run Undo fucntion
             break
         default:
-            self.performSegue(withIdentifier: "ReturnerToType", sender:sender);
+            sender.setBackgroundImage(#imageLiteral(resourceName: "OnCourtDepressedBackground.png"), for: UIControlState.selected)
+            sender.isSelected = true
+            sender.setTitleColor(UIColor(red: 198/255, green: 237/255, blue: 44/255, alpha: 1.0), for: UIControlState.selected)
+            
         }
 
+    }
+    
+    @IBAction func Type(_ sender: UIButton) {
+        Variables.tagOfType = sender.tag
+        IncrementStat()
+        deselectAll()
+    }
+    
+    func IncrementStat(){
+        Variables.total += 1
+        switch Variables.tagOfType{
+        case 12:
+            switch Variables.tagOfStroke{
+            case 2:Variables.DUFHGSW += 1
+            case 3:Variables.DUBHGSW += 1
+            case 4:Variables.DUFHVW += 1
+            case 5:Variables.DUBHVW += 1
+            case 6:Variables.DUOHW += 1
+            case 7:Variables.ADFHGSW += 1
+            case 8:Variables.ADBHGSW += 1
+            case 9:Variables.ADFHVW += 1
+            case 10:Variables.ADBHVW += 1
+            case 11:Variables.ADOHW += 1
+            default: break
+            }
+        case 13:
+            switch Variables.tagOfStroke{
+            case 2:Variables.DUFHGSFE += 1
+            case 3:Variables.DUBHGSFE += 1
+            case 4:Variables.DUFHVFE += 1
+            case 5:Variables.DUBHVFE += 1
+            case 6:Variables.DUOHFE += 1
+            case 7:Variables.ADFHGSFE += 1
+            case 8:Variables.ADBHGSFE += 1
+            case 9:Variables.ADFHVFE += 1
+            case 10:Variables.ADBHVFE += 1
+            case 11:Variables.ADOHFE += 1
+            default: break
+            }
+        case 14:
+            switch Variables.tagOfStroke{
+            case 2:Variables.DUFHGSUE += 1
+            case 3:Variables.DUBHGSUE += 1
+            case 4:Variables.DUFHVUE += 1
+            case 5:Variables.DUBHVUE += 1
+            case 6:Variables.DUOHUE += 1
+            case 7:Variables.ADFHGSUE += 1
+            case 8:Variables.ADBHGSUE += 1
+            case 9:Variables.ADFHVUE += 1
+            case 10:Variables.ADBHVUE += 1
+            case 11:Variables.ADOHUE += 1
+            default: break
+            }
+        default: break
+        }
+        
+    }
+    
+    func deselectAll(){
+        DUFHGS.isSelected = false
+        DUBHGS.isSelected = false
+        DUFHV.isSelected = false
+        DUBHV.isSelected = false
+        DUOH.isSelected = false
+        ADFHGS.isSelected = false
+        ADBHGS.isSelected = false
+        ADFHV.isSelected = false
+        ADBHV.isSelected = false
+        ADOH.isSelected = false
+        WinnerB.isSelected = false
+        ForcedErrorB.isSelected = false
+        UnforcedErrorB.isSelected = false
     }
 
     

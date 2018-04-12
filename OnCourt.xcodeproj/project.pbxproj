@@ -20,6 +20,7 @@
 		84BBF2DA2020C5B200993872 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D62020C5B200993872 /* StatsViewController.swift */; };
 		84BBF2DB2020C5B200993872 /* ErrorTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */; };
 		84BBF2DC2020C5B200993872 /* MainPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D82020C5B200993872 /* MainPlayViewController.swift */; };
+		84DE5A33207BC66C003E404D /* Tennis-court.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84DE5A32207BC66C003E404D /* Tennis-court.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		84BBF2D62020C5B200993872 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTypeViewController.swift; sourceTree = "<group>"; };
 		84BBF2D82020C5B200993872 /* MainPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPlayViewController.swift; sourceTree = "<group>"; };
+		84DE5A32207BC66C003E404D /* Tennis-court.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tennis-court.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +111,13 @@
 				84A80002200FA103004C80BA /* Main.storyboard */,
 				84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */,
 				84BBF2D82020C5B200993872 /* MainPlayViewController.swift */,
-				84534B67202427D700F5E6CF /* Tennis-court.png */,
 				84BBF2D62020C5B200993872 /* StatsViewController.swift */,
 				84A80005200FA103004C80BA /* Assets.xcassets */,
 				84A80007200FA103004C80BA /* LaunchScreen.storyboard */,
 				84A8000A200FA103004C80BA /* Info.plist */,
 				8476496B20221C6100DD15C0 /* OnCourt.entitlements */,
+				84DE5A32207BC66C003E404D /* Tennis-court.jpg */,
+				84534B67202427D700F5E6CF /* Tennis-court.png */,
 			);
 			path = OnCourt;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				84A80009200FA103004C80BA /* LaunchScreen.storyboard in Resources */,
 				84A80006200FA103004C80BA /* Assets.xcassets in Resources */,
+				84DE5A33207BC66C003E404D /* Tennis-court.jpg in Resources */,
 				84534B68202427D700F5E6CF /* Tennis-court.png in Resources */,
 				84A80004200FA103004C80BA /* Main.storyboard in Resources */,
 			);
