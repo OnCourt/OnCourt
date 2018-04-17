@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		84534B68202427D700F5E6CF /* Tennis-court.png in Resources */ = {isa = PBXBuildFile; fileRef = 84534B67202427D700F5E6CF /* Tennis-court.png */; };
-		8488A7BB2016449800411ABB /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488A7BA2016449800411ABB /* GamesViewController.swift */; };
+		8459262C2085945400DE27E9 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459262B2085945400DE27E9 /* Match.swift */; };
+		8459262E20859FF500DE27E9 /* MatchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459262D20859FF500DE27E9 /* MatchTableViewController.swift */; };
+		8488A7BB2016449800411ABB /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488A7BA2016449800411ABB /* MatchViewController.swift */; };
 		8488A7BD201644A900411ABB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488A7BC201644A900411ABB /* AccountViewController.swift */; };
 		84A80001200FA103004C80BA /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A80000200FA103004C80BA /* PlayViewController.swift */; };
 		84A80004200FA103004C80BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A80002200FA103004C80BA /* Main.storyboard */; };
@@ -35,8 +37,10 @@
 
 /* Begin PBXFileReference section */
 		84534B67202427D700F5E6CF /* Tennis-court.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tennis-court.png"; path = "../../../TennisTracker/Tennis-court.png"; sourceTree = "<group>"; };
+		8459262B2085945400DE27E9 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		8459262D20859FF500DE27E9 /* MatchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewController.swift; sourceTree = "<group>"; };
 		8476496B20221C6100DD15C0 /* OnCourt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnCourt.entitlements; sourceTree = "<group>"; };
-		8488A7BA2016449800411ABB /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		8488A7BA2016449800411ABB /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		8488A7BC201644A900411ABB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		84A80000200FA103004C80BA /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		84A80003200FA103004C80BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,12 +110,14 @@
 				84A8FFFC200FA103004C80BA /* AppDelegate.swift */,
 				84A8FFFE200FA103004C80BA /* HomeViewController.swift */,
 				84A80000200FA103004C80BA /* PlayViewController.swift */,
-				8488A7BA2016449800411ABB /* GamesViewController.swift */,
 				8488A7BC201644A900411ABB /* AccountViewController.swift */,
 				84A80002200FA103004C80BA /* Main.storyboard */,
 				84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */,
 				84BBF2D82020C5B200993872 /* MainPlayViewController.swift */,
 				84BBF2D62020C5B200993872 /* StatsViewController.swift */,
+				8488A7BA2016449800411ABB /* MatchViewController.swift */,
+				8459262B2085945400DE27E9 /* Match.swift */,
+				8459262D20859FF500DE27E9 /* MatchTableViewController.swift */,
 				84A80005200FA103004C80BA /* Assets.xcassets */,
 				84A80007200FA103004C80BA /* LaunchScreen.storyboard */,
 				84A8000A200FA103004C80BA /* Info.plist */,
@@ -240,8 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8488A7BB2016449800411ABB /* GamesViewController.swift in Sources */,
+				8488A7BB2016449800411ABB /* MatchViewController.swift in Sources */,
 				8488A7BD201644A900411ABB /* AccountViewController.swift in Sources */,
+				8459262C2085945400DE27E9 /* Match.swift in Sources */,
+				8459262E20859FF500DE27E9 /* MatchTableViewController.swift in Sources */,
 				84A80001200FA103004C80BA /* PlayViewController.swift in Sources */,
 				84BBF2DC2020C5B200993872 /* MainPlayViewController.swift in Sources */,
 				84BBF2DB2020C5B200993872 /* ErrorTypeViewController.swift in Sources */,
@@ -329,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -380,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

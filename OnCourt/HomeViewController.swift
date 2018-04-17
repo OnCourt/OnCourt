@@ -26,11 +26,26 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var Doubles4AdLabel: UILabel!
     //Team
     @IBOutlet weak var TeamNameLabel: UILabel!
+    //Views
+    @IBOutlet weak var SinglesPlayersView: UIView!
+    @IBOutlet weak var DoublesPlayersView: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "Tennis-court.jpg")?.draw(in: self.view.bounds)
+        
+        if let image: UIImage = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image)
+        }else{
+            UIGraphicsEndImageContext()
+            debugPrint("Image not available")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +55,19 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //Set Backgrounds
+        
+        //view.backgroundColor = UIColor(red: 27/255, green: 86/255, blue: 51/255, alpha: 1.0)
+        
+        SinglesPlayersView.backgroundColor = UIColor(red: 163/255, green: 165/255, blue: 162/255, alpha: 1.0)
+        SinglesPlayersView.layer.cornerRadius = 8
+        DoublesPlayersView.backgroundColor = UIColor(red: 163/255, green: 165/255, blue: 162/255, alpha: 1.0)
+        DoublesPlayersView.layer.cornerRadius = 8
+        TeamNameLabel.backgroundColor = UIColor(red: 2/255, green: 151/255, blue: 219/255, alpha: 1.0)
+        TeamNameLabel.layer.cornerRadius = 8
+        
+        //navigationController?.navigationBar.barTintColor = UIColor(red: 27/255, green: 95/255, blue: 51/255, alpha: 1.0)
         
         //Load Players
         let players = UserDefaults.standard

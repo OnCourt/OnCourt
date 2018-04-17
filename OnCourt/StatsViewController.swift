@@ -51,41 +51,15 @@ class StatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor(red: 2/255, green: 151/255, blue: 219/255, alpha: 1.0)
+        
         //Round Corners
-        DULabel.layer.cornerRadius=8
-        ADLabel.layer.cornerRadius=8
-        /*
-        DUFHGSWLabel.text = String(Variables.DUFHGSW)
-        DUFHGSFELabel.text = String(Variables.DUFHGSFE)
-        DUFHGSUELabel.text = String(Variables.DUFHGSUE)
-        ADFHGSWLabel.text = String(Variables.ADFHGSW)
-        ADFHGSFELabel.text = String(Variables.ADFHGSFE)
-        ADFHGSUELabel.text = String(Variables.ADFHGSUE)
-        DUBHGSWLabel.text = String(Variables.DUBHGSW)
-        DUBHGSFELabel.text = String(Variables.DUBHGSFE)
-        DUBHGSEULabel.text = String(Variables.DUBHGSUE)
-        ADBHGSWLabel.text = String(Variables.ADBHGSW)
-        ADBHGSFELabel.text = String(Variables.ADBHGSFE)
-        ADBHGSUELabel.text = String(Variables.ADBHGSUE)
-        DUFHVWLabel.text = String(Variables.DUFHVW)
-        DUFHVFELabel.text = String(Variables.DUFHVFE)
-        DUFHVUELabel.text = String(Variables.DUFHVUE)
-        ADFHVWLabel.text = String(Variables.ADFHVW)
-        ADFHVFELabel.text = String(Variables.ADFHVFE)
-        ADFHVUELabel.text = String(Variables.ADFHVUE)
-        DUBHVWLabel.text = String(Variables.DUBHVW)
-        DUBHVFELabel.text = String(Variables.DUBHVFE)
-        DUBHVUELabel.text = String(Variables.DUBHVUE)
-        ADBHVWLabel.text = String(Variables.ADBHVW)
-        ADBHVFELabel.text = String(Variables.ADBHVFE)
-        ADBHVUELabel.text = String(Variables.ADBHVUE)
-        DUOHWLabel.text = String(Variables.DUOHW)
-        DUOHFELabel.text = String(Variables.DUOHUE)
-        DUOHUELabel.text = String(Variables.DUOHUE)
-        ADOHWLabel.text = String(Variables.ADOHW)
-        ADOHFELabel.text = String(Variables.ADOHFE)
-        ADOHUELabel.text = String(Variables.ADOHUE)
- */
+        DULabel.layer.masksToBounds=true
+        DULabel.layer.cornerRadius=4
+        
+        ADLabel.layer.masksToBounds=true
+        ADLabel.layer.cornerRadius=4
+        
         DUFHGSWLabel.updateStat(value: Variables.DUFHGSW)
         DUFHGSFELabel.updateStat(value: Variables.DUFHGSFE)
         DUFHGSUELabel.updateStat(value: Variables.DUFHGSUE)
