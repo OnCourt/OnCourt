@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class MatchTableViewController: UITableViewController {
     
@@ -20,13 +21,13 @@ class MatchTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         
-        // Load any saved meals, otherwise load sample data.
+        // Load any saved matches, otherwise load sample data.
         if let savedMatches = loadMatches() {
             matches += savedMatches
         }
         else {
             // Load the sample data.
-            loadSampleMeals()
+            loadSampleMatches()
             
         }
     }
@@ -43,7 +44,7 @@ class MatchTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meals.count
+        return matches.count
     }
     
     
@@ -52,16 +53,15 @@ class MatchTableViewController: UITableViewController {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "MatchTableViewCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MealTableViewCell  else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MatchTableViewCell  else {
             fatalError("The dequeued cell is not an instance of MatchTableViewCell.")
         }
         
-        // Fetches the appropriate meal for the data source layout.
+        // Fetches the appropriate match for the data source layout.
         let match = matches[indexPath.row]
         
-        cell.nameLabel.text = meal.name
-        cell.photoImageView.image = meal.photo
-        cell.ratingControl.rating = meal.rating
+        cell.nameLabel.text = match.name
+        cell.dateLabel.text = match.date
         
         return cell
     }
@@ -80,8 +80,8 @@ class MatchTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            meals.remove(at: indexPath.row)
-            saveMeals()
+            matches.remove(at: indexPath.row)
+            saveMatches()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -115,23 +115,27 @@ class MatchTableViewController: UITableViewController {
         switch(segue.identifier ?? "") {
             
         case "AddItem":
-            os_log("Adding a new meal.", log: OSLog.default, type: .debug)
+            if #available(iOS 10.0, *) {
+                os_log("Adding a new match.", log: OSLog.default, type: .debug)
+            } else {
+                // Fallback on earlier versions
+            }
             
         case "ShowDetail":
-            guard let mealDetailViewController = segue.destination as? MealViewController else {
+            guard let matchDetailViewController = segue.destination as? MatchViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
-            guard let selectedMealCell = sender as? MealTableViewCell else {
+            guard let selectedMatchCell = sender as? MatchTableViewCell else {
                 fatalError("Unexpected sender: \(sender)")
             }
             
-            guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
+            guard let indexPath = tableView.indexPath(for: selectedMatchCell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
             
-            let selectedMeal = meals[indexPath.row]
-            mealDetailViewController.meal = selectedMeal
+            let selectedMatch = matches[indexPath.row]
+            matchDetailViewController.match = selectedMatch
             
         default:
             fatalError("Unexpected Segue Identifier; \(segue.identifier)")
@@ -141,61 +145,61 @@ class MatchTableViewController: UITableViewController {
     
     //MARK: Actions
     
-    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
+    @IBAction func unwindToMatchList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? MatchViewController, let match = sourceViewController.match {
             
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                // Update an existing meal.
-                meals[selectedIndexPath.row] = meal
+            if let selectedIndexPath =     tableView.indexPathForSelectedRow {
+                // Update an existing match.
+                matches[selectedIndexPath.row] = match
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }
             else {
-                // Add a new meal.
-                let newIndexPath = IndexPath(row: meals.count, section: 0)
+                // Add a new match.
+                let newIndexPath = IndexPath(row: matches.count, section: 0)
                 
-                meals.append(meal)
+                matches.append(match)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
             
-            // Save the meals.
-            saveMeals()
+            // Save the matches.
+            saveMatches()
         }
     }
     
     //MARK: Private Methods
     
-    private func loadSampleMeals() {
+    private func loadSampleMatches() {
         
-        let photo1 = UIImage(named: "meal1")
-        let photo2 = UIImage(named: "meal2")
-        let photo3 = UIImage(named: "meal3")
-        
-        guard let meal1 = Meal(name: "Caprese Salad", photo: photo1, rating: 4) else {
-            fatalError("Unable to instantiate meal1")
+        guard let match1 = Match(name: "Sample", date: "12/18/1999") else {
+            fatalError("Unable to instantiate match1")
+        }
+        guard let match2 = Match(name: "Sample 2", date: "10/17/1999") else {
+            fatalError("Unable to instantiate match1")
         }
         
-        guard let meal2 = Meal(name: "Chicken and Potatoes", photo: photo2, rating: 5) else {
-            fatalError("Unable to instantiate meal2")
-        }
         
-        guard let meal3 = Meal(name: "Pasta with Meatballs", photo: photo3, rating: 3) else {
-            fatalError("Unable to instantiate meal2")
-        }
-        
-        meals += [meal1, meal2, meal3]
+        matches += [match1, match2]
     }
     
-    private func saveMeals() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path)
+    private func saveMatches() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(matches, toFile: Match.ArchiveURL.path)
         if isSuccessfulSave {
-            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
+            if #available(iOS 10.0, *) {
+                os_log("Matches successfully saved.", log: OSLog.default, type: .debug)
+            } else {
+                // Fallback on earlier versions
+            }
         } else {
-            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+            if #available(iOS 10.0, *) {
+                os_log("Failed to save matches...", log: OSLog.default, type: .error)
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
     
-    private func loadMeals() -> [Meal]?  {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.ArchiveURL.path) as? [Meal]
+    private func loadMatches() -> [Match]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Match.ArchiveURL.path) as? [Match]
     }
     
 }

@@ -22,6 +22,7 @@
 		84BBF2DA2020C5B200993872 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D62020C5B200993872 /* StatsViewController.swift */; };
 		84BBF2DB2020C5B200993872 /* ErrorTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */; };
 		84BBF2DC2020C5B200993872 /* MainPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBF2D82020C5B200993872 /* MainPlayViewController.swift */; };
+		84C8705E208804CB0028C302 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8705D208804CA0028C302 /* MatchTableViewCell.swift */; };
 		84DE5A33207BC66C003E404D /* Tennis-court.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84DE5A32207BC66C003E404D /* Tennis-court.jpg */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		84BBF2D62020C5B200993872 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		84BBF2D72020C5B200993872 /* ErrorTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTypeViewController.swift; sourceTree = "<group>"; };
 		84BBF2D82020C5B200993872 /* MainPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPlayViewController.swift; sourceTree = "<group>"; };
+		84C8705D208804CA0028C302 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		84DE5A32207BC66C003E404D /* Tennis-court.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tennis-court.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 				8488A7BA2016449800411ABB /* MatchViewController.swift */,
 				8459262B2085945400DE27E9 /* Match.swift */,
 				8459262D20859FF500DE27E9 /* MatchTableViewController.swift */,
+				84C8705D208804CA0028C302 /* MatchTableViewCell.swift */,
 				84A80005200FA103004C80BA /* Assets.xcassets */,
 				84A80007200FA103004C80BA /* LaunchScreen.storyboard */,
 				84A8000A200FA103004C80BA /* Info.plist */,
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C8705E208804CB0028C302 /* MatchTableViewCell.swift in Sources */,
 				8488A7BB2016449800411ABB /* MatchViewController.swift in Sources */,
 				8488A7BD201644A900411ABB /* AccountViewController.swift in Sources */,
 				8459262C2085945400DE27E9 /* Match.swift in Sources */,
