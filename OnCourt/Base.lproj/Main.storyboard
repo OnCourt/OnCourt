@@ -672,8 +672,6 @@
         <!--Match View Controller-->
         <scene sceneID="gDH-bY-a8G">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Jy-6E-5Ll" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Vrf-59-g0x" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="hek-Kc-AZs" customClass="MatchViewController" customModule="OnCourt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="83u-Vi-3NF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1154,6 +1152,8 @@
                         <outlet property="saveButton" destination="wyW-iz-Ha6" id="ks1-Ci-tKL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Jy-6E-5Ll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vrf-59-g0x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2629.5999999999999" y="698.5007496251875"/>
         </scene>
@@ -1643,14 +1643,15 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uaS-qs-Hie">
-                                <rect key="frame" x="138" y="580" width="98" height="30"/>
+                                <rect key="frame" x="134.80833685417292" y="580" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djf-IT-P2c">
-                                        <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
-                                        <color key="backgroundColor" red="0.77647058823529413" green="0.90980392156862744" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.1058823529" green="0.66274509800000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Save">
-                                            <color key="titleColor" red="0.10588235294117647" green="0.66274509803921566" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.7803921568627451" green="0.90196078431372551" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="saveMatch:" destination="6he-GU-139" eventType="touchUpInside" id="kSh-GJ-gcw"/>
@@ -1658,10 +1659,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agr-ha-AHK">
-                                        <rect key="frame" x="54" y="0.0" width="44" height="30"/>
-                                        <color key="backgroundColor" red="0.77647058823529413" green="0.90980392156862744" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="57" y="0.0" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.1058823529" green="0.66274509800000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title=" Clear ">
-                                            <color key="titleColor" red="0.10588235294117647" green="0.66274509803921566" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.77647058823529413" green="0.89803921568627454" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="clearStats:" destination="6he-GU-139" eventType="touchUpInside" id="UUW-Xy-VZl"/>

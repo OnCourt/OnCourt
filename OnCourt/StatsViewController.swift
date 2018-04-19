@@ -53,7 +53,7 @@ class StatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 2/255, green: 151/255, blue: 219/255, alpha: 1.0)
+        //view.backgroundColor = UIColor(red: 2/255, green: 151/255, blue: 219/255, alpha: 1.0)
         
         //Round Corners
         DULabel.layer.masksToBounds=true
