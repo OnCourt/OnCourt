@@ -11,8 +11,9 @@ import UIKit
 class MatchTableViewCell: UITableViewCell {
     
     //MARK: Properties
-    @IBOutlet weak var nameLabel: UITextField!
-    @IBOutlet weak var dateLabel: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

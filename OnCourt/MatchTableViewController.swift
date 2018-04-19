@@ -9,11 +9,13 @@
 import UIKit
 import os.log
 
+struct structMatches{
+    static var matches = [Match]()
+}
+
 class MatchTableViewController: UITableViewController {
     
     //MARK: Properties
-    
-    var matches = [Match]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +25,15 @@ class MatchTableViewController: UITableViewController {
         
         // Load any saved matches, otherwise load sample data.
         if let savedMatches = loadMatches() {
-            matches += savedMatches
+            structMatches.matches += savedMatches
         }
         else {
             // Load the sample data.
             loadSampleMatches()
             
         }
+        //loadSampleMatches()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,7 +48,7 @@ class MatchTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return matches.count
+        return structMatches.matches.count
     }
     
     
@@ -58,7 +62,7 @@ class MatchTableViewController: UITableViewController {
         }
         
         // Fetches the appropriate match for the data source layout.
-        let match = matches[indexPath.row]
+        let match = structMatches.matches[indexPath.row]
         
         cell.nameLabel.text = match.name
         cell.dateLabel.text = match.date
@@ -80,7 +84,7 @@ class MatchTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            matches.remove(at: indexPath.row)
+            structMatches.matches.remove(at: indexPath.row)
             saveMatches()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -127,18 +131,20 @@ class MatchTableViewController: UITableViewController {
             }
             
             guard let selectedMatchCell = sender as? MatchTableViewCell else {
-                fatalError("Unexpected sender: \(sender)")
+                //fatalError("Unexpected sender: \(sender)")
+                break
             }
             
             guard let indexPath = tableView.indexPath(for: selectedMatchCell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
             
-            let selectedMatch = matches[indexPath.row]
+            let selectedMatch = structMatches.matches[indexPath.row]
             matchDetailViewController.match = selectedMatch
             
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            //fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            break
         }
     }
     
@@ -150,14 +156,32 @@ class MatchTableViewController: UITableViewController {
             
             if let selectedIndexPath =     tableView.indexPathForSelectedRow {
                 // Update an existing match.
-                matches[selectedIndexPath.row] = match
+                structMatches.matches[selectedIndexPath.row] = match
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }
             else {
                 // Add a new match.
-                let newIndexPath = IndexPath(row: matches.count, section: 0)
+                let newIndexPath = IndexPath(row: structMatches.matches.count, section: 0)
                 
-                matches.append(match)
+                structMatches.matches.append(match)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+            
+            // Save the matches.
+            saveMatches()
+        }
+        else if let sourceViewController = sender.source as? StatsViewController, let match = sourceViewController.match {
+            
+            if let selectedIndexPath =     tableView.indexPathForSelectedRow {
+                // Update an existing match.
+                structMatches.matches[selectedIndexPath.row] = match
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else {
+                // Add a new match.
+                let newIndexPath = IndexPath(row: structMatches.matches.count, section: 0)
+                
+                structMatches.matches.append(match)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
             
@@ -170,19 +194,19 @@ class MatchTableViewController: UITableViewController {
     
     private func loadSampleMatches() {
         
-        guard let match1 = Match(name: "Sample", date: "12/18/1999") else {
+        guard let match1 = Match(name: "Sample 1", date: "12/18/1999", DUFHGSW: 0, DUFHGSFE: 0, DUFHGSUE: 0, DUBHGSW: 0, DUBHGSFE: 0, DUBHGSUE: 0, DUFHVW: 0, DUFHVFE: 0, DUFHVUE: 0, DUBHVW: 0, DUBHVFE: 0, DUBHVUE: 0, DUOHW: 0, DUOHFE: 0, DUOHUE: 0, ADFHGSW: 0, ADFHGSFE: 0, ADFHGSUE: 0, ADBHGSW: 0, ADBHGSFE: 0, ADBHGSUE: 0, ADFHVW: 0, ADFHVFE: 0, ADFHVUE: 0, ADBHVW: 0, ADBHVFE: 0, ADBHVUE: 0, ADOHW: 0, ADOHFE: 0, ADOHUE: 0, total: 0) else {
             fatalError("Unable to instantiate match1")
         }
-        guard let match2 = Match(name: "Sample 2", date: "10/17/1999") else {
+        guard let match2 = Match(name: "Sample 2", date: "10/17/1999", DUFHGSW: 0, DUFHGSFE: 0, DUFHGSUE: 0, DUBHGSW: 0, DUBHGSFE: 0, DUBHGSUE: 0, DUFHVW: 0, DUFHVFE: 0, DUFHVUE: 0, DUBHVW: 0, DUBHVFE: 0, DUBHVUE: 0, DUOHW: 0, DUOHFE: 0, DUOHUE: 0, ADFHGSW: 0, ADFHGSFE: 0, ADFHGSUE: 0, ADBHGSW: 0, ADBHGSFE: 0, ADBHGSUE: 0, ADFHVW: 0, ADFHVFE: 0, ADFHVUE: 0, ADBHVW: 0, ADBHVFE: 0, ADBHVUE: 0, ADOHW: 0, ADOHFE: 0, ADOHUE: 0, total: 0) else {
             fatalError("Unable to instantiate match1")
         }
         
         
-        matches += [match1, match2]
+        structMatches.matches += [match1, match2]
     }
     
     private func saveMatches() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(matches, toFile: Match.ArchiveURL.path)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(structMatches.matches, toFile: Match.ArchiveURL.path)
         if isSuccessfulSave {
             if #available(iOS 10.0, *) {
                 os_log("Matches successfully saved.", log: OSLog.default, type: .debug)
