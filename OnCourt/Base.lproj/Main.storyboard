@@ -1110,6 +1110,20 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oeJ-mn-qc6">
+                                <rect key="frame" x="67" y="517" width="292" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAj-fX-RDx">
+                                <rect key="frame" x="16" y="522" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vxW-m1-NeN"/>
@@ -1149,6 +1163,7 @@
                         <outlet property="DUOHWLabel" destination="v1q-Ji-19z" id="vEB-JC-fRX"/>
                         <outlet property="dateTextField" destination="Bou-em-0IP" id="l4S-TK-S70"/>
                         <outlet property="nameTextField" destination="Ou1-kD-IAu" id="kZ8-P9-pfB"/>
+                        <outlet property="notesView" destination="oeJ-mn-qc6" id="Cx6-lL-E3J"/>
                         <outlet property="saveButton" destination="wyW-iz-Ha6" id="ks1-Ci-tKL"/>
                     </connections>
                 </viewController>

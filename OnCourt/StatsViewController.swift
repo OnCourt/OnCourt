@@ -95,7 +95,7 @@ class StatsViewController: UIViewController {
         ADOHFELabel.updateStat(value: Variables.ADOHFE, total: Variables.total)
         ADOHUELabel.updateStat(value: Variables.ADOHUE, total: Variables.total)
         
-        guard let savematch = Match(name: "No-name", date: "No-date", DUFHGSW: Variables.DUFHGSW, DUFHGSFE: Variables.DUFHGSFE, DUFHGSUE: Variables.DUFHGSUE, DUBHGSW: Variables.DUBHGSW, DUBHGSFE: Variables.DUBHGSFE, DUBHGSUE: Variables.DUBHGSUE, DUFHVW: Variables.DUFHVW, DUFHVFE: Variables.DUFHVFE, DUFHVUE: Variables.DUFHVUE, DUBHVW: Variables.DUBHVW, DUBHVFE: Variables.DUBHVFE, DUBHVUE: Variables.DUBHVUE, DUOHW: Variables.DUOHW, DUOHFE: Variables.DUOHUE, DUOHUE: Variables.DUOHUE, ADFHGSW: Variables.ADFHGSW, ADFHGSFE: Variables.ADFHGSFE, ADFHGSUE: Variables.ADFHGSUE, ADBHGSW: Variables.ADBHGSW, ADBHGSFE: Variables.ADBHGSFE, ADBHGSUE: Variables.ADBHGSUE, ADFHVW: Variables.ADFHVW, ADFHVFE: Variables.ADFHVFE, ADFHVUE: Variables.ADFHVUE, ADBHVW: Variables.ADBHVW, ADBHVFE: Variables.ADBHVFE, ADBHVUE: Variables.ADBHVUE, ADOHW: Variables.ADOHW, ADOHFE: Variables.ADOHFE, ADOHUE: Variables.ADOHUE, total: Variables.total)
+        guard let savematch = Match(name: "No-name", date: "No-date", DUFHGSW: Variables.DUFHGSW, DUFHGSFE: Variables.DUFHGSFE, DUFHGSUE: Variables.DUFHGSUE, DUBHGSW: Variables.DUBHGSW, DUBHGSFE: Variables.DUBHGSFE, DUBHGSUE: Variables.DUBHGSUE, DUFHVW: Variables.DUFHVW, DUFHVFE: Variables.DUFHVFE, DUFHVUE: Variables.DUFHVUE, DUBHVW: Variables.DUBHVW, DUBHVFE: Variables.DUBHVFE, DUBHVUE: Variables.DUBHVUE, DUOHW: Variables.DUOHW, DUOHFE: Variables.DUOHUE, DUOHUE: Variables.DUOHUE, ADFHGSW: Variables.ADFHGSW, ADFHGSFE: Variables.ADFHGSFE, ADFHGSUE: Variables.ADFHGSUE, ADBHGSW: Variables.ADBHGSW, ADBHGSFE: Variables.ADBHGSFE, ADBHGSUE: Variables.ADBHGSUE, ADFHVW: Variables.ADFHVW, ADFHVFE: Variables.ADFHVFE, ADFHVUE: Variables.ADFHVUE, ADBHVW: Variables.ADBHVW, ADBHVFE: Variables.ADBHVFE, ADBHVUE: Variables.ADBHVUE, ADOHW: Variables.ADOHW, ADOHFE: Variables.ADOHFE, ADOHUE: Variables.ADOHUE, total: Variables.total, notes: "")
             else{
                 fatalError("Unable to save match")
         }
@@ -108,7 +108,7 @@ class StatsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func saveMatch(_ sender: Any) {
-        guard let savematch = Match(name: "No-name", date: "No-date", DUFHGSW: Variables.DUFHGSW, DUFHGSFE: Variables.DUFHGSFE, DUFHGSUE: Variables.DUFHGSUE, DUBHGSW: Variables.DUBHGSW, DUBHGSFE: Variables.DUBHGSFE, DUBHGSUE: Variables.DUBHGSUE, DUFHVW: Variables.DUFHVW, DUFHVFE: Variables.DUFHVFE, DUFHVUE: Variables.DUFHVUE, DUBHVW: Variables.DUBHVW, DUBHVFE: Variables.DUBHVFE, DUBHVUE: Variables.DUBHVUE, DUOHW: Variables.DUOHW, DUOHFE: Variables.DUOHUE, DUOHUE: Variables.DUOHUE, ADFHGSW: Variables.ADFHGSW, ADFHGSFE: Variables.ADFHGSFE, ADFHGSUE: Variables.ADFHGSUE, ADBHGSW: Variables.ADBHGSW, ADBHGSFE: Variables.ADBHGSFE, ADBHGSUE: Variables.ADBHGSUE, ADFHVW: Variables.ADFHVW, ADFHVFE: Variables.ADFHVFE, ADFHVUE: Variables.ADFHVUE, ADBHVW: Variables.ADBHVW, ADBHVFE: Variables.ADBHVFE, ADBHVUE: Variables.ADBHVUE, ADOHW: Variables.ADOHW, ADOHFE: Variables.ADOHFE, ADOHUE: Variables.ADOHUE, total: Variables.total)
+        guard let savematch = Match(name: "No-name", date: "No-date", DUFHGSW: Variables.DUFHGSW, DUFHGSFE: Variables.DUFHGSFE, DUFHGSUE: Variables.DUFHGSUE, DUBHGSW: Variables.DUBHGSW, DUBHGSFE: Variables.DUBHGSFE, DUBHGSUE: Variables.DUBHGSUE, DUFHVW: Variables.DUFHVW, DUFHVFE: Variables.DUFHVFE, DUFHVUE: Variables.DUFHVUE, DUBHVW: Variables.DUBHVW, DUBHVFE: Variables.DUBHVFE, DUBHVUE: Variables.DUBHVUE, DUOHW: Variables.DUOHW, DUOHFE: Variables.DUOHUE, DUOHUE: Variables.DUOHUE, ADFHGSW: Variables.ADFHGSW, ADFHGSFE: Variables.ADFHGSFE, ADFHGSUE: Variables.ADFHGSUE, ADBHGSW: Variables.ADBHGSW, ADBHGSFE: Variables.ADBHGSFE, ADBHGSUE: Variables.ADBHGSUE, ADFHVW: Variables.ADFHVW, ADFHVFE: Variables.ADFHVFE, ADFHVUE: Variables.ADFHVUE, ADBHVW: Variables.ADBHVW, ADBHVFE: Variables.ADBHVFE, ADBHVUE: Variables.ADBHVUE, ADOHW: Variables.ADOHW, ADOHFE: Variables.ADOHFE, ADOHUE: Variables.ADOHUE, total: Variables.total, notes: "")
             else{
                 fatalError("Unable to save match")
         }
@@ -198,7 +198,7 @@ class StatsLabel: UILabel {
             textColor = UIColor.green
         }
         else{
-            textColor = UIColor.yellow
+            textColor = UIColor.orange
         }
     }
 }

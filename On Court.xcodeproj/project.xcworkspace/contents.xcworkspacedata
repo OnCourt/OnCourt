@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:OnCourt.xcodeproj">
+      location = "self:/Users/IanAnderson/Documents/Xcode/OnCourt/OnCourt/On Court.xcodeproj">
    </FileRef>
 </Workspace>

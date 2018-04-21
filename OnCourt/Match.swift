@@ -48,7 +48,9 @@ class Match: NSObject, NSCoding {
     var ADOHW: Int = 0
     var ADOHFE: Int = 0
     var ADOHUE: Int = 0
+    //All
     var total: Int = 0
+    var notes: String = ""
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -94,11 +96,12 @@ class Match: NSObject, NSCoding {
         static let ADOHUE = "ADOHUE"
         //Total
         static let total = "total"
+        static let notes = "notes"
     }
     
     //MARK: Initialization
     
-    init?(name: String, date: String, DUFHGSW: Int, DUFHGSFE: Int, DUFHGSUE: Int, DUBHGSW: Int, DUBHGSFE: Int, DUBHGSUE: Int, DUFHVW: Int, DUFHVFE: Int, DUFHVUE: Int, DUBHVW: Int, DUBHVFE: Int, DUBHVUE: Int, DUOHW: Int, DUOHFE: Int, DUOHUE: Int, ADFHGSW: Int, ADFHGSFE: Int, ADFHGSUE: Int, ADBHGSW: Int, ADBHGSFE: Int, ADBHGSUE: Int, ADFHVW: Int, ADFHVFE: Int, ADFHVUE: Int, ADBHVW: Int, ADBHVFE: Int, ADBHVUE: Int, ADOHW: Int, ADOHFE: Int, ADOHUE: Int, total: Int) {
+    init?(name: String, date: String, DUFHGSW: Int, DUFHGSFE: Int, DUFHGSUE: Int, DUBHGSW: Int, DUBHGSFE: Int, DUBHGSUE: Int, DUFHVW: Int, DUFHVFE: Int, DUFHVUE: Int, DUBHVW: Int, DUBHVFE: Int, DUBHVUE: Int, DUOHW: Int, DUOHFE: Int, DUOHUE: Int, ADFHGSW: Int, ADFHGSFE: Int, ADFHGSUE: Int, ADBHGSW: Int, ADBHGSFE: Int, ADBHGSUE: Int, ADFHVW: Int, ADFHVFE: Int, ADFHVUE: Int, ADBHVW: Int, ADBHVFE: Int, ADBHVUE: Int, ADOHW: Int, ADOHFE: Int, ADOHUE: Int, total: Int, notes: String) {
         
         // The name must not be empty
         guard !name.isEmpty else {
@@ -152,6 +155,7 @@ class Match: NSObject, NSCoding {
         self.ADOHFE = ADOHFE
         self.ADOHUE = ADOHUE
         self.total = total
+        self.notes = notes
         
         
     }
@@ -194,6 +198,7 @@ class Match: NSObject, NSCoding {
         aCoder.encode(ADOHFE, forKey: PropertyKey.ADOHFE)
         aCoder.encode(ADOHUE, forKey: PropertyKey.ADOHUE)
         aCoder.encode(total, forKey: PropertyKey.total)
+        aCoder.encode(notes, forKey: PropertyKey.notes)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -239,9 +244,12 @@ class Match: NSObject, NSCoding {
         let ADOHFE = aDecoder.decodeInteger(forKey: PropertyKey.ADOHFE)
         let ADOHUE = aDecoder.decodeInteger(forKey: PropertyKey.ADOHUE)
         let total = aDecoder.decodeInteger(forKey: PropertyKey.total)
+        guard let notes = aDecoder.decodeObject(forKey: PropertyKey.notes) as? String else{
+            return nil
+        }
         
         // Must call designated initializer.
-        self.init(name: name, date: date!, DUFHGSW: DUFHGSW, DUFHGSFE: DUFHGSFE, DUFHGSUE: DUFHGSUE, DUBHGSW: DUBHGSW, DUBHGSFE: DUBHGSFE, DUBHGSUE: DUBHGSUE, DUFHVW: DUFHVW, DUFHVFE: DUFHVFE, DUFHVUE: DUFHVUE, DUBHVW: DUBHVW, DUBHVFE: DUBHVFE, DUBHVUE: DUBHVUE, DUOHW: DUOHW, DUOHFE: DUOHFE, DUOHUE: DUOHUE, ADFHGSW: ADFHGSW, ADFHGSFE: ADFHGSFE, ADFHGSUE: ADFHGSUE, ADBHGSW: ADBHGSW, ADBHGSFE: ADBHGSFE, ADBHGSUE: ADBHGSUE, ADFHVW: ADFHVW, ADFHVFE: ADFHVFE, ADFHVUE: ADFHVUE, ADBHVW: ADBHVW, ADBHVFE: ADBHVFE, ADBHVUE: ADBHVUE, ADOHW: ADOHW, ADOHFE: ADOHFE, ADOHUE: ADOHUE, total: total)
+        self.init(name: name, date: date!, DUFHGSW: DUFHGSW, DUFHGSFE: DUFHGSFE, DUFHGSUE: DUFHGSUE, DUBHGSW: DUBHGSW, DUBHGSFE: DUBHGSFE, DUBHGSUE: DUBHGSUE, DUFHVW: DUFHVW, DUFHVFE: DUFHVFE, DUFHVUE: DUFHVUE, DUBHVW: DUBHVW, DUBHVFE: DUBHVFE, DUBHVUE: DUBHVUE, DUOHW: DUOHW, DUOHFE: DUOHFE, DUOHUE: DUOHUE, ADFHGSW: ADFHGSW, ADFHGSFE: ADFHGSFE, ADFHGSUE: ADFHGSUE, ADBHGSW: ADBHGSW, ADBHGSFE: ADBHGSFE, ADBHGSUE: ADBHGSUE, ADFHVW: ADFHVW, ADFHVFE: ADFHVFE, ADFHVUE: ADFHVUE, ADBHVW: ADBHVW, ADBHVFE: ADBHVFE, ADBHVUE: ADBHVUE, ADOHW: ADOHW, ADOHFE: ADOHFE, ADOHUE: ADOHUE, total: total, notes: notes)
         
     }
 }

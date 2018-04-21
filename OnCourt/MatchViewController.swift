@@ -15,6 +15,7 @@ class MatchViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var notesView: UITextView!
     
     //IBOutlets
     @IBOutlet weak var DULabel: UILabel!
@@ -60,6 +61,7 @@ class MatchViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
      */
     var match: Match?
     var total: Int = 0
+    var notes: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +107,8 @@ class MatchViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
             ADOHFELabel.updateStat(value: match.ADOHFE, total: match.total)
             ADOHUELabel.updateStat(value: match.ADOHUE, total: match.total)
             total = match.total
+            notes = match.notes
+            notesView.text = notes
         }
         
         //Round Corners
@@ -113,6 +117,11 @@ class MatchViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         
         ADLabel.layer.masksToBounds=true
         ADLabel.layer.cornerRadius=4
+        
+        notesView.layer.borderWidth = 1
+        notesView.layer.borderColor = UIColor.lightGray.cgColor
+        notesView.layer.masksToBounds=true
+        notesView.layer.cornerRadius=8
         
         // Enable the Save button only if the text field has a valid Match name.
         updateSaveButtonState()
@@ -171,7 +180,7 @@ class MatchViewController: UIViewController, UITextFieldDelegate, UIImagePickerC
         let date = dateTextField.text ?? ""
         
         // Set the match to be passed to MatchTableViewController after the unwind segue.
-        match = Match(name: name, date: date, DUFHGSW: (DUFHGSWLabel.text as! NSString).integerValue, DUFHGSFE: (DUFHGSFELabel.text as! NSString).integerValue, DUFHGSUE: (DUFHGSUELabel.text as! NSString).integerValue, DUBHGSW: (DUBHGSWLabel.text as! NSString).integerValue, DUBHGSFE: (DUBHGSFELabel.text as! NSString).integerValue, DUBHGSUE: (DUBHGSEULabel.text as! NSString).integerValue, DUFHVW: (DUFHVWLabel.text as! NSString).integerValue, DUFHVFE: (DUFHVFELabel.text as! NSString).integerValue, DUFHVUE: (DUFHVUELabel.text as! NSString).integerValue, DUBHVW: (DUBHVWLabel.text as! NSString).integerValue, DUBHVFE: (DUBHVFELabel.text as! NSString).integerValue, DUBHVUE: (DUBHVUELabel.text as! NSString).integerValue, DUOHW: (DUOHWLabel.text as! NSString).integerValue, DUOHFE: (DUOHFELabel.text as! NSString).integerValue, DUOHUE: (DUOHUELabel.text as! NSString).integerValue, ADFHGSW: (ADFHGSWLabel.text as! NSString).integerValue, ADFHGSFE: (ADFHGSFELabel.text as! NSString).integerValue, ADFHGSUE: (ADFHGSUELabel.text as! NSString).integerValue, ADBHGSW: (ADBHGSWLabel.text as! NSString).integerValue, ADBHGSFE: (ADBHGSFELabel.text as! NSString).integerValue, ADBHGSUE: (ADBHGSUELabel.text as! NSString).integerValue, ADFHVW: (ADFHVWLabel.text as! NSString).integerValue, ADFHVFE: (ADFHVFELabel.text as! NSString).integerValue, ADFHVUE: (ADFHVUELabel.text as! NSString).integerValue, ADBHVW: (ADBHVWLabel.text as! NSString).integerValue, ADBHVFE: (ADBHVFELabel.text as! NSString).integerValue, ADBHVUE: (ADBHVUELabel.text as! NSString).integerValue, ADOHW: (ADOHWLabel.text as! NSString).integerValue, ADOHFE: (ADOHFELabel.text as! NSString).integerValue, ADOHUE: (ADOHUELabel.text as! NSString).integerValue, total: total)
+        match = Match(name: name, date: date, DUFHGSW: (DUFHGSWLabel.text as! NSString).integerValue, DUFHGSFE: (DUFHGSFELabel.text as! NSString).integerValue, DUFHGSUE: (DUFHGSUELabel.text as! NSString).integerValue, DUBHGSW: (DUBHGSWLabel.text as! NSString).integerValue, DUBHGSFE: (DUBHGSFELabel.text as! NSString).integerValue, DUBHGSUE: (DUBHGSEULabel.text as! NSString).integerValue, DUFHVW: (DUFHVWLabel.text as! NSString).integerValue, DUFHVFE: (DUFHVFELabel.text as! NSString).integerValue, DUFHVUE: (DUFHVUELabel.text as! NSString).integerValue, DUBHVW: (DUBHVWLabel.text as! NSString).integerValue, DUBHVFE: (DUBHVFELabel.text as! NSString).integerValue, DUBHVUE: (DUBHVUELabel.text as! NSString).integerValue, DUOHW: (DUOHWLabel.text as! NSString).integerValue, DUOHFE: (DUOHFELabel.text as! NSString).integerValue, DUOHUE: (DUOHUELabel.text as! NSString).integerValue, ADFHGSW: (ADFHGSWLabel.text as! NSString).integerValue, ADFHGSFE: (ADFHGSFELabel.text as! NSString).integerValue, ADFHGSUE: (ADFHGSUELabel.text as! NSString).integerValue, ADBHGSW: (ADBHGSWLabel.text as! NSString).integerValue, ADBHGSFE: (ADBHGSFELabel.text as! NSString).integerValue, ADBHGSUE: (ADBHGSUELabel.text as! NSString).integerValue, ADFHVW: (ADFHVWLabel.text as! NSString).integerValue, ADFHVFE: (ADFHVFELabel.text as! NSString).integerValue, ADFHVUE: (ADFHVUELabel.text as! NSString).integerValue, ADBHVW: (ADBHVWLabel.text as! NSString).integerValue, ADBHVFE: (ADBHVFELabel.text as! NSString).integerValue, ADBHVUE: (ADBHVUELabel.text as! NSString).integerValue, ADOHW: (ADOHWLabel.text as! NSString).integerValue, ADOHFE: (ADOHFELabel.text as! NSString).integerValue, ADOHUE: (ADOHUELabel.text as! NSString).integerValue, total: total, notes: notesView.text)
     }
     
     //MARK: Actions

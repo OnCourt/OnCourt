@@ -194,15 +194,15 @@ class MatchTableViewController: UITableViewController {
     
     private func loadSampleMatches() {
         
-        guard let match1 = Match(name: "Sample 1", date: "12/18/1999", DUFHGSW: 0, DUFHGSFE: 0, DUFHGSUE: 0, DUBHGSW: 0, DUBHGSFE: 0, DUBHGSUE: 0, DUFHVW: 0, DUFHVFE: 0, DUFHVUE: 0, DUBHVW: 0, DUBHVFE: 0, DUBHVUE: 0, DUOHW: 0, DUOHFE: 0, DUOHUE: 0, ADFHGSW: 0, ADFHGSFE: 0, ADFHGSUE: 0, ADBHGSW: 0, ADBHGSFE: 0, ADBHGSUE: 0, ADFHVW: 0, ADFHVFE: 0, ADFHVUE: 0, ADBHVW: 0, ADBHVFE: 0, ADBHVUE: 0, ADOHW: 0, ADOHFE: 0, ADOHUE: 0, total: 0) else {
+        guard let match1 = Match(name: "Sample Match 1", date: "4/12/18", DUFHGSW: 5, DUFHGSFE: 1, DUFHGSUE: 0, DUBHGSW: 0, DUBHGSFE: 3, DUBHGSUE: 7, DUFHVW: 2, DUFHVFE: 1, DUFHVUE: 0, DUBHVW: 0, DUBHVFE: 2, DUBHVUE: 0, DUOHW: 0, DUOHFE: 0, DUOHUE: 0, ADFHGSW: 2, ADFHGSFE: 4, ADFHGSUE: 1, ADBHGSW: 5, ADBHGSFE: 1, ADBHGSUE: 0, ADFHVW: 0, ADFHVFE: 2, ADFHVUE: 0, ADBHVW: 2, ADBHVFE: 1, ADBHVUE: 0, ADOHW: 1, ADOHFE: 0, ADOHUE: 0, total: 40, notes: "Fatigues quickly and starts to fall off in later sets") else {
             fatalError("Unable to instantiate match1")
         }
-        guard let match2 = Match(name: "Sample 2", date: "10/17/1999", DUFHGSW: 0, DUFHGSFE: 0, DUFHGSUE: 0, DUBHGSW: 0, DUBHGSFE: 0, DUBHGSUE: 0, DUFHVW: 0, DUFHVFE: 0, DUFHVUE: 0, DUBHVW: 0, DUBHVFE: 0, DUBHVUE: 0, DUOHW: 0, DUOHFE: 0, DUOHUE: 0, ADFHGSW: 0, ADFHGSFE: 0, ADFHGSUE: 0, ADBHGSW: 0, ADBHGSFE: 0, ADBHGSUE: 0, ADFHVW: 0, ADFHVFE: 0, ADFHVUE: 0, ADBHVW: 0, ADBHVFE: 0, ADBHVUE: 0, ADOHW: 0, ADOHFE: 0, ADOHUE: 0, total: 0) else {
-            fatalError("Unable to instantiate match1")
-        }
+        /*guard let match2 = Match(name: "Sample Match 2", date: "4/16/18", DUFHGSW: 0, DUFHGSFE: 0, DUFHGSUE: 0, DUBHGSW: 0, DUBHGSFE: 0, DUBHGSUE: 0, DUFHVW: 0, DUFHVFE: 0, DUFHVUE: 0, DUBHVW: 0, DUBHVFE: 0, DUBHVUE: 0, DUOHW: 0, DUOHFE: 0, DUOHUE: 0, ADFHGSW: 0, ADFHGSFE: 0, ADFHGSUE: 0, ADBHGSW: 0, ADBHGSFE: 0, ADBHGSUE: 0, ADFHVW: 0, ADFHVFE: 0, ADFHVUE: 0, ADBHVW: 0, ADBHVFE: 0, ADBHVUE: 0, ADOHW: 0, ADOHFE: 0, ADOHUE: 0, total: 0) else {
+           // fatalError("Unable to instantiate match1")
+        }*/
         
         
-        structMatches.matches += [match1, match2]
+        structMatches.matches += [match1/*, match2*/]
     }
     
     private func saveMatches() {
