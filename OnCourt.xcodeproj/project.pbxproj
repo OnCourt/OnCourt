@@ -48,10 +48,10 @@
 		84A80005200FA103004C80BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A80008200FA103004C80BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84A8000A200FA103004C80BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84A8000F200FA103004C80BA /* On CourtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On CourtTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A8000F200FA103004C80BA /* OnCourtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnCourtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A80013200FA103004C80BA /* OnCourtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnCourtTests.swift; sourceTree = "<group>"; };
 		84A80015200FA103004C80BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84A8FFF9200FA103004C80BA /* On Court.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On Court.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A8FFF9200FA103004C80BA /* OnCourt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnCourt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8FFFC200FA103004C80BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A8FFFE200FA103004C80BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84BBF2D62020C5B200993872 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		84A8FFFA200FA103004C80BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84A8FFF9200FA103004C80BA /* On Court.app */,
-				84A8000F200FA103004C80BA /* On CourtTests.xctest */,
+				84A8FFF9200FA103004C80BA /* OnCourt.app */,
+				84A8000F200FA103004C80BA /* OnCourtTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84A8000E200FA103004C80BA /* On CourtTests */ = {
+		84A8000E200FA103004C80BA /* OnCourtTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84A8001B200FA103004C80BA /* Build configuration list for PBXNativeTarget "On CourtTests" */;
+			buildConfigurationList = 84A8001B200FA103004C80BA /* Build configuration list for PBXNativeTarget "OnCourtTests" */;
 			buildPhases = (
 				84A8000B200FA103004C80BA /* Sources */,
 				84A8000C200FA103004C80BA /* Frameworks */,
@@ -147,14 +147,14 @@
 			dependencies = (
 				84A80011200FA103004C80BA /* PBXTargetDependency */,
 			);
-			name = "On CourtTests";
+			name = OnCourtTests;
 			productName = OnCourtTests;
-			productReference = 84A8000F200FA103004C80BA /* On CourtTests.xctest */;
+			productReference = 84A8000F200FA103004C80BA /* OnCourtTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		84A8FFF8200FA103004C80BA /* On Court */ = {
+		84A8FFF8200FA103004C80BA /* OnCourt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84A80018200FA103004C80BA /* Build configuration list for PBXNativeTarget "On Court" */;
+			buildConfigurationList = 84A80018200FA103004C80BA /* Build configuration list for PBXNativeTarget "OnCourt" */;
 			buildPhases = (
 				84A8FFF5200FA103004C80BA /* Sources */,
 				84A8FFF6200FA103004C80BA /* Frameworks */,
@@ -164,9 +164,9 @@
 			);
 			dependencies = (
 			);
-			name = "On Court";
+			name = OnCourt;
 			productName = OnCourt;
-			productReference = 84A8FFF9200FA103004C80BA /* On Court.app */;
+			productReference = 84A8FFF9200FA103004C80BA /* OnCourt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -195,7 +195,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84A8FFF4200FA103004C80BA /* Build configuration list for PBXProject "On Court" */;
+			buildConfigurationList = 84A8FFF4200FA103004C80BA /* Build configuration list for PBXProject "OnCourt" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -208,8 +208,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84A8FFF8200FA103004C80BA /* On Court */,
-				84A8000E200FA103004C80BA /* On CourtTests */,
+				84A8FFF8200FA103004C80BA /* OnCourt */,
+				84A8000E200FA103004C80BA /* OnCourtTests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,7 +268,7 @@
 /* Begin PBXTargetDependency section */
 		84A80011200FA103004C80BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84A8FFF8200FA103004C80BA /* On Court */;
+			target = 84A8FFF8200FA103004C80BA /* OnCourt */;
 			targetProxy = 84A80010200FA103004C80BA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -415,7 +415,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -434,7 +434,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -450,7 +450,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/On Court.app/On Court";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnCourt.app/OnCourt";
 			};
 			name = Debug;
 		};
@@ -466,14 +466,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/On Court.app/On Court";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnCourt.app/OnCourt";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84A80018200FA103004C80BA /* Build configuration list for PBXNativeTarget "On Court" */ = {
+		84A80018200FA103004C80BA /* Build configuration list for PBXNativeTarget "OnCourt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84A80019200FA103004C80BA /* Debug */,
@@ -482,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84A8001B200FA103004C80BA /* Build configuration list for PBXNativeTarget "On CourtTests" */ = {
+		84A8001B200FA103004C80BA /* Build configuration list for PBXNativeTarget "OnCourtTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84A8001C200FA103004C80BA /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84A8FFF4200FA103004C80BA /* Build configuration list for PBXProject "On Court" */ = {
+		84A8FFF4200FA103004C80BA /* Build configuration list for PBXProject "OnCourt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84A80016200FA103004C80BA /* Debug */,
